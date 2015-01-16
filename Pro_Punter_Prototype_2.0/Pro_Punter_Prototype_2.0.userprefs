@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TXT_HorseNames_.txt">
+    <Files>
+      <File FileName="Assets\Scripts\C_Horse.cs" Line="12" Column="16" />
+      <File FileName="Assets\Scripts\S_Player_Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\S_TXT_Data.cs" Line="26" Column="13" />
+      <File FileName="Assets\TXT_HorseNames_1.txt" Line="20" Column="9" />
+      <File FileName="Assets\TXT_HorseNames_.txt" Line="14" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
