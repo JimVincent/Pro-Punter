@@ -46,7 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\S_UI_Manager.cs" />
      <Compile Include="Assets\Scripts\C_Horse.cs" />
+     <Compile Include="Assets\Scripts\S_GameManager.cs" />
+     <Compile Include="Assets\Scripts\S_MicInput.cs" />
      <Compile Include="Assets\Scripts\S_Player_Movement.cs" />
      <Compile Include="Assets\Scripts\S_TXT_Data.cs" />
      <None Include="Assets\TXT_HorseNames_1.txt" />

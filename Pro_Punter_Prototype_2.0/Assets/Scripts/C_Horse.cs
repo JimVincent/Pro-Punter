@@ -12,6 +12,7 @@ public class C_Horse : MonoBehaviour
 	void Start () 
 	{
 	
+
 	}
 	
 	// Update is called once per frame
@@ -19,4 +20,12 @@ public class C_Horse : MonoBehaviour
 	{
 	
 	}
+
+	// randomly generated member var values
+	public void SetData()
+	{
+		mName = S_TXT_Data.inst.NewName();
+
+	}
+	
 }
