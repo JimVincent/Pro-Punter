@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\S_HorseGrid_Manager.cs" />
      <Compile Include="Assets\S_UI_Manager.cs" />
      <Compile Include="Assets\Scripts\C_Horse.cs" />
      <Compile Include="Assets\Scripts\S_GameManager.cs" />

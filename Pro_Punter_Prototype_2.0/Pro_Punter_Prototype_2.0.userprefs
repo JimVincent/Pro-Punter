@@ -1,14 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\S_UI_Manager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\S_GameManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\S_MicInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\C_Horse.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\S_Player_Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\S_TXT_Data.cs" Line="1" Column="1" />
-      <File FileName="Assets\TXT_HorseNames_1.txt" Line="1" Column="1" />
-      <File FileName="Assets\TXT_HorseNames_.txt" Line="1" Column="1" />
-      <File FileName="Assets\S_UI_Manager.cs" Line="27" Column="7" />
+      <File FileName="Assets\S_HorseGrid_Manager.cs" Line="54" Column="1" />
+      <File FileName="Assets\Scripts\C_Horse.cs" Line="41" Column="1" />
+      <File FileName="Assets\Scripts\S_GameManager.cs" Line="34" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
