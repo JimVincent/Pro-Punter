@@ -13,7 +13,7 @@ public class S_HorseGrid_Manager : MonoBehaviour
 		inst = this;
 
 		// load saved horses
-		for(int i = 1; i < S_GameManager.newHorseLimit + 1; i++)
+		for(int i = 1; i < S_GameManager.inst.newHorseLimit + 1; i++)
 		{
 			if(PlayerPrefs.HasKey("savedHorses" + i.ToString()))
 			{
@@ -29,14 +29,16 @@ public class S_HorseGrid_Manager : MonoBehaviour
 	// return random list of available horses
 	public List<C_Horse> GetRacers(int amount)
 	{
-		List<C_Horse> tempL;
-		ShuffleHorses();
+		List<C_Horse> tempL = new List<C_Horse>();
+		ShuffleHorses(horseList);
 
 		for(int i = 0; i < amount; i++)
 		{
-			if(!horseList[i].mLastRaceDay ==  S_GameManager.inst.day)
+			if(horseList[i].mLastRaceDay !=  S_GameManager.inst.day)
 				tempL.Add(horseList[i]);
 		}
+
+		return tempL;
 	}
 	
 	// adds new horses to the horseList
@@ -54,7 +56,7 @@ public class S_HorseGrid_Manager : MonoBehaviour
 	private void ShuffleHorses(List<C_Horse> list)
 	{
 		C_Horse tempH;
-		for(int i = list.Count - 1; i = 0; i--)
+		for(int i = list.Count - 1; i == 0; i--)
 		{
 			int random = Random.Range(0, i - 1);
 			tempH = list[random];
