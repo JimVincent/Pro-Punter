@@ -11,9 +11,12 @@ public class S_GameManager : MonoBehaviour
 
 	public enum State {preRace, race, finRace};
 	static public State gameState;
+
+	public int gridSize = 8;
+	public int racesPerDay = 4;
+	public int newHorseLimit = 100;
+	public int newHorsesPerDay = 2;
 	
-
-
 	void Awake()
 	{
 		inst = this;
@@ -29,6 +32,12 @@ public class S_GameManager : MonoBehaviour
 	void Update () 
 	{
 
+	}
+
+	public void NewDay()
+	{
+		day++;
+		PlayerPrefs.SetInt("day", day);
 	}
 
 

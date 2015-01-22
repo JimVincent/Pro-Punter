@@ -5,25 +5,15 @@ using System.Collections.Generic;
 public class S_HorseGrid_Manager : MonoBehaviour 
 {
 	static public S_HorseGrid_Manager inst;
-
-	public int gridSize = 8;
-	public int racesPerDay = 4;
-
-	private bool fullRace = false;
 	public List<C_Horse> horseList = new List<C_Horse>();	// horses to choose from
-
-	public List<C_Horse> raceList = new List<C_Horse>();			// horses in race
-
-	public int newHorseLimit = 100;
-	public int newHorsesPerDay = 2;
-
+	public List<C_Horse> raceList = new List<C_Horse>();	// horses in race
 
 	void Awake()
 	{
 		inst = this;
 
 		// load saved horses
-		for(int i = 1; i < newHorseLimit + 1; i++)
+		for(int i = 1; i < S_GameManager.newHorseLimit + 1; i++)
 		{
 			if(PlayerPrefs.HasKey("savedHorses" + i.ToString()))
 			{
@@ -36,35 +26,21 @@ public class S_HorseGrid_Manager : MonoBehaviour
 		}
 	}
 
-	// Use this for initialization
-	void Start () 
+	// return random list of available horses
+	public List<C_Horse> GetRacers(int amount)
 	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
+		List<C_Horse> tempL;
+		ShuffleHorses();
 
-	// Adds new horses to horseList per day
-	public void FillRoster()
-	{
-		if(S_GameManager.inst.day <= 1)
+		for(int i = 0; i < amount; i++)
 		{
-			// create all new horses
-			AddHorse(gridSize * racesPerDay);
-			ShuffleHorses();
-		}
-		else
-		{
-			AddHorse(newHorsesPerDay);
+			if(!horseList[i].mLastRaceDay ==  S_GameManager.inst.day)
+				tempL.Add(horseList[i]);
 		}
 	}
-
-	// generates a new horse
-	public void AddHorse(int amount)
+	
+	// adds new horses to the horseList
+	public void AddHorses(int amount)
 	{
 		for(int i = 0; i < amount; i++)
 		{
@@ -75,8 +51,15 @@ public class S_HorseGrid_Manager : MonoBehaviour
 		}
 	}
 
-	public void ShuffleHorses()
+	private void ShuffleHorses(List<C_Horse> list)
 	{
-
+		C_Horse tempH;
+		for(int i = list.Count - 1; i = 0; i--)
+		{
+			int random = Random.Range(0, i - 1);
+			tempH = list[random];
+			list[random] = list[i];
+			list[i] = tempH;
+		}
 	}
 }
