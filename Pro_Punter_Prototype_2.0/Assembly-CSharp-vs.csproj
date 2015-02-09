@@ -46,12 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\C_Horse.cs" />
+     <Compile Include="Assets\Scripts\Classes\C_Bet.cs" />
+     <Compile Include="Assets\Scripts\Classes\C_Horse.cs" />
+     <Compile Include="Assets\Scripts\Classes\C_Race.cs" />
+     <Compile Include="Assets\Scripts\Enums\E_BetType.cs" />
      <Compile Include="Assets\Scripts\S_AudioManager.cs" />
      <Compile Include="Assets\Scripts\S_GameManager.cs" />
      <Compile Include="Assets\Scripts\S_HorseGrid_Manager.cs" />
      <Compile Include="Assets\Scripts\S_MicInput.cs" />
      <Compile Include="Assets\Scripts\S_Player_Movement.cs" />
+     <Compile Include="Assets\Scripts\S_RaceManager.cs" />
      <Compile Include="Assets\Scripts\S_TXT_Data.cs" />
      <Compile Include="Assets\Scripts\S_UI_Manager.cs" />
      <Compile Include="Assets\Scripts\S_UI_Menu.cs" />

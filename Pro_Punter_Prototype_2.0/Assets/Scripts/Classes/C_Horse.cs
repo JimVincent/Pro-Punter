@@ -1,5 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+/*
+ * Is: A class representing a single horse. 
+ * Has: Funcs to generate a new horse with random values. Funcs to load and save its own data.
+ * Use: Used in races to produce results as well as to trade based on value.
+ * 
+*/
 
 public class C_Horse : MonoBehaviour 
 {
@@ -9,9 +17,9 @@ public class C_Horse : MonoBehaviour
 	public int mLuck;
 	public int mValue;
 	public bool isPlayer = false;
+	public List<int> mRaceList;
 	public int mRacecount = 0;
 	public int mRacesWon = 0;
-	public int[] mLastThreeResults = new int[3];
 	public int mLastRaceDay = 0;
 	
 	// randomly generated horse
@@ -33,12 +41,6 @@ public class C_Horse : MonoBehaviour
 		int tempVal = mSpeed * mStamina * mLuck;
 		mValue = tempVal + (tempVal / 100) * mRacesWon;
 
-		// zero race results
-		for(int i = 0; i < 3; i++)
-		{
-			mLastThreeResults[i] = 0;
-		}
-
 		SaveHorse();
 	}
 
@@ -55,16 +57,12 @@ public class C_Horse : MonoBehaviour
 			mRacecount = PlayerPrefs.GetInt(name + "raceCount");
 			mRacesWon = PlayerPrefs.GetInt(name + "racesWon");
 			mLastRaceDay = PlayerPrefs.GetInt(name + "lastRaceDay");
-			for(int i = 0; i < 3; i++)
-			{
-				mLastThreeResults[i] = PlayerPrefs.GetInt(name + "lastThreeResults" + i);
-			}
 		}
 		else
 			Debug.LogError("No saved data for horse name :" + name);
 	}
 
-	// update saved horse data
+	// save horse data
 	public void SaveHorse()
 	{
 		PlayerPrefs.SetInt(name + "speed", mSpeed);
@@ -74,9 +72,5 @@ public class C_Horse : MonoBehaviour
 		PlayerPrefs.SetInt(name + "raceCount", mRacecount);
 		PlayerPrefs.SetInt(name + "racesWon", mRacesWon);
 		PlayerPrefs.SetInt(name + "lastRaceDay", mLastRaceDay);
-		for(int i = 0; i < 3; i++)
-		{
-			PlayerPrefs.GetInt(name + "lastThreeResults" + i, mLastThreeResults[i]);
-		}
 	}
 }

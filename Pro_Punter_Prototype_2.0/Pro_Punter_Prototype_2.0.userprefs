@@ -1,6 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Classes\C_Race.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Enums\E_BetType.cs" Line="2" Column="27" />
+      <File FileName="Assets\Scripts\Classes\C_Bet.cs" Line="7" Column="63" />
+      <File FileName="Assets\Scripts\Classes\C_Race.cs" Line="38" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
