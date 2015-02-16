@@ -17,6 +17,7 @@ public class C_Horse : MonoBehaviour
 	public int mLuck;
 	public int mValue;
 	public bool isPlayer = false;
+	public bool isRetired;
 	public List<int> mRaceList;
 	public int mRacecount = 0;
 	public int mRacesWon = 0;
@@ -29,7 +30,7 @@ public class C_Horse : MonoBehaviour
 		bool found = false;
 		while(!found)
 		{
-			mName = S_TXT_Data.inst.NewName();
+			mName = S_NameGenerator.inst.NewName();
 			if(!PlayerPrefs.HasKey(mName + "name"))
 				found = true;
 		}
